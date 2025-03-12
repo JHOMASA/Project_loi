@@ -80,7 +80,7 @@ app.config['EXTRACTED_FOLDER'] = EXTRACTED_FOLDER
 
 
 
-GOOGLE_API_KEY = ''
+GOOGLE_API_KEY = 'AIzaSyDjNFU6WAx6FJ74zhm2vQqWyD5MsYKUcOk'
 genai.configure(api_key=GOOGLE_API_KEY)
 
 
