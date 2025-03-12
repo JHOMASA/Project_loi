@@ -359,11 +359,15 @@ def extract_tables(pdf_path):
     return extracted_tables
 
 @app.route('/get_table_data/<table_id>')
+@app.route('/get_table_data/<table_id>')
 def get_table_data(table_id):
     try:
-        
-        file_path ="C:\\Users\\Owner\\Desktop\\d5\\extractinghtml\\nutrition-labelling.html"
-        
+        # Get the current directory where app.py is located
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+
+        # Build the file path relative to app.py
+        file_path = os.path.join(base_dir, "d5", "extractinghtml", "nutrition-labelling.html")
+
         if not os.path.exists(file_path):
             print(f"File not found at {file_path}")
             return jsonify({'error': 'Tables file not found'}), 404
@@ -423,10 +427,18 @@ def get_table_data(table_id):
         print(f"Error processing request: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
-@app.route('/get_table_captions')
+@app.route('')
 def get_table_captions():
     try:
-        file_path = "C:\\Users\\Owner\\Desktop\\d5\\extractinghtml\\nutrition-labelling.html"
+        # Get the current directory where app.py is located
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+
+        # Build the file path relative to app.py
+        file_path = os.path.join(base_dir, "d5", "extractinghtml", "nutrition-labelling.html")
+
+        if not os.path.exists(file_path):
+            print(f"File not found at {file_path}")
+            return jsonify({'error': 'Tables file not found'}), 404
         
         
         encodings = ['utf-8-sig', 'latin-1', 'cp1252', 'iso-8859-1']
