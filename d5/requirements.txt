@@ -1,0 +1,9 @@
+Flask==3.1.0
+transformers==4.48.3
+google-generativeai==0.8.4
+beautifulsoup4==4.13.3
+Pillow==11.1.0
+Flask-CORS==5.0.1
+torch==2.5.1+cu124
+pdf2image==1.17.0
+Werkzeug==3.1.3
